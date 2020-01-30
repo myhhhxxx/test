@@ -3,6 +3,7 @@ const fs = require('fs');
 
 const gitToken = fs.readFileSync('./git-token');
 
+
 request.get('https://api.ipify.org', (err, res, body) => {
     const existingIp = fs.readFileSync('./ip').toString();
 
