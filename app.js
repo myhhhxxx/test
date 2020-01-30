@@ -11,6 +11,7 @@ request.get('https://api.ipify.org', (err, res, body) => {
         fs.writeFileSync('./ip', body);
     }
 
+
     require('child_process').exec('git add .', (err, stdout) => {
         console.log(stdout);
 
