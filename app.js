@@ -14,7 +14,10 @@ request.get('https://api.ipify.org', (err, res, body) => {
         console.log(stdout);
 
         require('child_process').exec('git commit -m "Update address"', (error, stdout) => {
-            require('child_process').exec('git push');
+            console.log(stdout);
+            require('child_process').exec('git push', (er, stdout) => {
+                console.log(stdout);
+            });
         });
     });
 
